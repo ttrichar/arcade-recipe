@@ -1,4 +1,4 @@
-name: ttrichar/arcade-recipe
+name: ttrichar/public-web-react
 
 on:
   push:
@@ -15,7 +15,7 @@ env:
   NPMRegistry: https://registry.npmjs.org/
   InstallCommand: npm ci
   BuildCommand: npm run build
-  Output: ./public
+  Output: ./build
 
 jobs:
   build:
@@ -77,7 +77,7 @@ jobs:
       - uses: actions/setup-node@v2
         if: ${{ (!!env.InstallCommand || !!env.BuildCommand) && steps.package_json_exists.outputs.files_exists == 'true' }}
         with:
-          node-version: 14
+          node-version: '*'
           registry-url: ${{ env.NPMRegistry }}
 
       # install npm dependencies from package-lock.json
