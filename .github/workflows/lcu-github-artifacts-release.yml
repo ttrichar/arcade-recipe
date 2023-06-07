@@ -1,10 +1,11 @@
-name: ttrichar/arcade-recipe
+name: Svelte Build/Release
 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 permissions: write-all
 
