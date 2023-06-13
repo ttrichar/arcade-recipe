@@ -1,4 +1,4 @@
-name: Svelte Build/Release
+name: ttrichar/arcade-recipe
 
 on:
   push:
